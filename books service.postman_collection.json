@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "9321d294-d1d5-4c99-ad6a-4633ba22b4d3",
+		"name": "books service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/ping",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"author\": \"Prashant\",\n\t\"title\": \"Shekher\",\n\t\"isbn\": \"0191116636\",\n\t\"releaseDate\": \"2017-12-12\"\n}"
+				},
+				"url": "http://localhost:8081/ping"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/books",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"author\": \"Jawaharlal Nehru\",\n\t\"title\": \"The Discovery of India\",\n\t\"isbn\": \"0191118866\",\n\t\"releaseDate\": \"1946-11-14\"\n}"
+				},
+				"url": "http://localhost:8081/books"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/books",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"author\": \"Pandit Javal Lal Nehru\",\n\t\"title\": \"The Discovery of India\",\n\t\"isbn\": \"0191118866\",\n\t\"releaseDate\": \"1946-11-14\"\n}"
+				},
+				"url": "http://localhost:8081/books"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/books?isbn=0198526636",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8081/books?isbn=0191118866",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "isbn",
+							"value": "0191118866"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/books?isbn=0198526636 Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8081/books?isbn=0191118866",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "isbn",
+							"value": "0191118866"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

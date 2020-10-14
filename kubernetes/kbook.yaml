@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kbook
+spec:
+  selector:
+    app: kbook
+  ports:
+    - port: 80
+      targetPort: 8080
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kbook
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kbook
+  template:
+    metadata:
+      labels:
+        app: kbook
+    spec:
+      containers:
+        - name: kbook
+          #image: prashant7july/kbook:1.0.0 # Public Docker Hub Image use imagePullPolicy: Always
+          # Issue - ErrImageNeverPull
+          # solution - kubectl describe po - Container image "books:0.0.1" is not present
+          # change books:0.0.1 -> books:1.0.0 
+          # kubectl delete -f ./kube/kbook.yaml
+          # kubectl create -f ./kube/kbook.yaml
+          image: books:1.0.0 # Local Docker Image use imagePullPolicy: Never
+          #ports:
+          #  - containerPort: 8080
+          #imagePullPolicy: Always # When you want to pull Image from Docker Hub image: prashant7july/kbook:1.0.0
+          imagePullPolicy: Never # When from Local System Docker Image
