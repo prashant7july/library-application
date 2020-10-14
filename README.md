@@ -115,7 +115,7 @@ You can run Kubernetes locally using [minikube](https://github.com/kubernetes/mi
 You can deploy on kubernetes using the manifests present in `kubernetes` folder.
 
 ## Accessing the Store
-If you are running the store on Kubernetes via minikube then, find the IP address of Minikube and the Node Port of the web service.
+If you are running the library on Kubernetes via minikube then, find the IP address of Minikube and the Node Port of the web service.
 
 ```
 $ ./deploy.sh
