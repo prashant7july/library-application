@@ -65,7 +65,7 @@ Response:
 {}
 ```
 
-### 4. Delete item
+### 4. Delete book
 Endpoint: DELETE /books/:id OR /books?isbn=:isbn
 
 Payload: none
@@ -77,7 +77,7 @@ Response:
 
 ## Header Value
 * 2XX - Success
-* 4XX - Clint Side Error
+* 4XX - Client Side Error
 * 5XX - Server Side Error
 
 ## API documented (OpenAPI)
