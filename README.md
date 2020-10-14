@@ -1,5 +1,5 @@
 # simple-crud
-Build a Restful CRUD API for a Book application using Node.js with storing the data in json formate. So this application is known as stateful Application because it uses filesystem use.
+Build a Restful CRUD API for a Library application using Node.js with storing the data in json formate to create books service. So this application is known as stateful Application because it uses filesystem use.
 
 `Note: ISBN is unique with length 10, not used id or uuid for primary key`
 
