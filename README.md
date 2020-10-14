@@ -1,4 +1,4 @@
-# simple-crud
+# Restful CRUD API for a Library application
 Build a Restful CRUD API for a Library application using Node.js with storing the data in json formate to create books service. So this application is known as stateful Application because it uses filesystem use.
 
 `Note: ISBN is unique with length 10, not used id or uuid for primary key`
@@ -80,11 +80,10 @@ Response:
 * 4XX - Client Side Error
 * 5XX - Server Side Error
 
-## How to create API documented (OpenAPI) with docker
-docker run -p 8090:8080 swaggerapi/swagger-editor
-http://localhost:8090/
+## How to create API documented (OpenAPI) with docker ?
+Execute swagger-editor docker run command `docker run -p 8090:8080 swaggerapi/swagger-editor` and Check in Address Bar `http://localhost:8090/` and create `swagger.yml` file accordingly.
 
-$ docker run --rm -p 9002:8080 -v $(pwd)/swagger.yml:/swagger.yaml -e SWAGGER_JSON=/swagger.yaml swaggerapi/swagger-ui
+Then use `swagger.yml` file to any tech stake team and check with docker run command `docker run --rm -p 9002:8080 -v $(pwd)/swagger.yml:/swagger.yaml -e SWAGGER_JSON=/swagger.yaml swaggerapi/swagger-ui`
 
 # Build(Docker)/Ship/Deploy(Kubernetes)
 
